@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tamaka.sharedpreferences.MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/blank_top"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blank_top"
+        android:text="Selamat Datang di Aplikasi Parkir"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:id="@+id/tx_welcome"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx_welcome"
+        android:text="v1.0.0"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:id="@+id/tx_ver"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/blank_mid"
+        android:layout_below="@+id/tx_ver"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blank_mid"
+        android:text="Masukan Username dan Password Anda Dulu"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:id="@+id/tx_info"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="78dp"
+        android:background="@color/colorLigthBrown"
+        android:layout_centerVertical="true"
+        android:id="@+id/linearLay">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorWhite"
+            android:id="@+id/tx_username"
+            android:hint="Username or Email"
+            android:textStyle="italic"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorWhite"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/tx_pass"
+            android:hint="Password"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:text="Login"
+        android:id="@+id/btn_login"
+        android:layout_below="@+id/linearLay"
+        android:layout_marginTop="20dp"
+        android:onClick="button_onClick"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/btn_login"
+        android:id="@+id/blank_bottom"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Remember Me"
+        android:id="@+id/chk_box"
+        android:layout_below="@+id/blank_bottom"/>
+
+</RelativeLayout>

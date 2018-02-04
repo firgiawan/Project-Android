@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tamaka.sharedpreferences.BuatMobil">
+
+    <EditText
+        android:id="@+id/nomor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txnomor"
+        android:layout_below="@+id/txnomor"
+        android:inputType="number"
+        android:maxLength="10">
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/txnomor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Nomor" />
+
+    <TextView
+        android:id="@+id/txmobil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nomor"
+        android:layout_below="@+id/nomor"
+        android:layout_marginTop="10dp"
+        android:text="Mobil" />
+
+    <EditText
+        android:id="@+id/mobil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txmobil"
+        android:layout_below="@+id/txmobil"
+        android:inputType="text"
+        android:maxLength="20"/>
+
+    <TextView
+        android:id="@+id/txtjenis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mobil"
+        android:layout_below="@+id/mobil"
+        android:layout_marginTop="10dp"
+        android:text="Jenis Mobil" />
+
+    <EditText
+        android:id="@+id/jenis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtjenis"
+        android:layout_below="@+id/txtjenis"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ambil Gambar Lokasi"
+        android:id="@+id/textgambar"
+        android:layout_below="@id/jenis"/>
+
+    <Button
+        android:id="@+id/take"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mobil"
+        android:layout_below="@+id/textgambar"
+        android:text="take" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgPreview"
+        android:layout_below="@+id/take"/>
+
+    <Button
+        android:id="@+id/simpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mobil"
+        android:layout_alignParentBottom="true"
+        style="?android:attr/borderlessButtonStyle"
+        android:drawableLeft="@drawable/savebt"
+        android:text="Simpan" />
+
+    <Button
+        android:id="@+id/kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        style="?android:attr/borderlessButtonStyle"
+        android:drawableLeft="@drawable/backbt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/mobil"
+        android:layout_alignEnd="@+id/mobil" />
+
+</RelativeLayout>
